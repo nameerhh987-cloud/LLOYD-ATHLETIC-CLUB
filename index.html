@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lloyd Athletic Club — Portland's Premier Athletic & Fitness Destination. Elevate your training with top-tier equipment, championship courts, and an elite community at 815 NE Halsey St, Portland, OR." />
+  <meta name="keywords" content="Lloyd Athletic Club, Portland gym, athletic club Portland OR, fitness center Portland, racquetball courts, squash, personal training, free day pass" />
+  <meta name="author" content="Lloyd Athletic Club" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LLOYD ATHLETIC CLUB — Portland's Premier Athletic & Fitness Destination" />
+  <meta property="og:description" content="Portland's premier athletic & fitness destination. Elevate your training with top-tier equipment and an elite community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lloydathleticclub.com" />
+
+  <title>LLOYD ATHLETIC CLUB — Portland's Premier Athletic & Fitness Destination</title>
+
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Three.js (r128) for Interactive 3D Hero Object -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon via Clean SVG Vector -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23CCFF00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'/></svg>" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FLOATING CAPSULE NAVBAR
+  ═══════════════════════════════════════════════════════════ -->
+  <nav id="navbar" aria-label="Main Navigation">
+    <div class="nav-capsule">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Lloyd Athletic Club Home">
+        LLOYD<span class="logo-x">&nbsp;ATHLETIC</span>
+        <span class="logo-dot" aria-hidden="true"></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#facilities">Amenities</a></li>
+        <li><a href="#pricing">Memberships</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+
+      <!-- Desktop Actions: High-Converting CTAs -->
+      <div class="nav-actions">
+        <a href="#location" class="btn-nav-ghost" id="nav-contact-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Contact Us
+        </a>
+        <a href="#pricing" class="btn-join" id="nav-pass-btn">GET PASS</a>
+
+        <!-- Mobile Hamburger -->
+        <button
+          class="nav-hamburger"
+          id="nav-hamburger"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE DRAWER
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <span class="drawer-logo">LLOYD AC</span>
+        <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="drawer-nav" role="list">
+        <li>
+          <a href="#facilities">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            Amenities
+          </a>
+        </li>
+        <li>
+          <a href="#pricing">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            Membership Tiers
+          </a>
+        </li>
+        <li>
+          <a href="#location">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Location &amp; Hours
+          </a>
+        </li>
+      </ul>
+
+      <div class="drawer-cta">
+        <a
+          href="#pricing"
+          class="btn-drawer-primary"
+          id="drawer-join-btn"
+        >CLAIM FREE PASS</a>
+        <a
+          href="tel:5032874594"
+          class="btn-drawer-wa"
+          id="drawer-phone-btn"
+        >
+          <!-- Phone SVG -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Call (503) 287-4594
+        </a>
+        <a
+          href="#location"
+          class="btn-drawer-wa"
+          id="drawer-contact-btn"
+          style="color: var(--cyan); border-color: var(--border-cyan);"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Visit Studio
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="hero" aria-labelledby="hero-heading">
+
+    <!-- Location Tag / Eyebrow badge -->
+    <div class="hero-eyebrow" role="text">
+      <span class="eyebrow-dot" aria-hidden="true"></span>
+      PORTLAND, OR • ESTABLISHED COMMUNITY
+    </div>
+
+    <!-- Main headline: Gym Name Large & Bold for Maximum Visual Impact -->
+    <h1 class="hero-title" id="hero-heading">
+      LLOYD ATHLETIC
+      <span class="line-2">CLUB</span>
+    </h1>
+
+    <!-- Sub-headline -->
+    <p class="hero-subtitle">
+      Portland's Premier Athletic &amp; Fitness Destination. Elevate your training with top-tier equipment and an elite community.
+    </p>
+
+    <!-- Interactive 3D Three.js Athletic Object Container -->
+    <div class="hero-3d-stage reveal" id="hero-3d-stage">
+      <div id="hero-3d-canvas" class="hero-3d-canvas" role="region" aria-label="Interactive 3D Lloyd Athletic Club Equipment"></div>
+      <div class="hero-3d-hint">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+        </svg>
+        <span>Interactive 3D • Drag to Rotate</span>
+      </div>
+    </div>
+
+    <!-- Stats Pills (populated by script.js) -->
+    <div class="hero-stats reveal-stagger" id="hero-stats" role="list" aria-label="Lloyd Athletic Club highlights">
+      <!-- Rendered dynamically -->
+    </div>
+
+    <!-- Dual CTAs -->
+    <div class="hero-ctas reveal">
+      <a href="#pricing" class="btn-primary" id="hero-explore-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+        CLAIM FREE PASS
+      </a>
+      <a href="#facilities" class="btn-secondary" id="hero-amenities-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="10 8 16 12 10 16 10 8"></polygon>
+        </svg>
+        EXPLORE AMENITIES
+      </a>
+    </div>
+
+    <!-- 4-Card Gym Image Gallery Grid -->
+    <div class="hero-gallery-wrap container">
+      <div class="hero-gallery-grid" id="hero-gallery" role="list" aria-label="Gym Floor & Training Areas">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STATS CARDS SECTION (Specification Data)
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="stats" aria-label="Lloyd Athletic Club at a glance">
+    <div class="container">
+      <div class="stats-grid reveal-stagger" id="stats-grid" role="list">
+        <!-- Populated dynamically:
+             Card 1: Value "4.6★" | Label "820+ REVIEWS"
+             Card 2: Value "FULL" | Label "ATHLETIC AMENITIES"
+             Card 3: Value "LOCAL" | Label "PORTLAND COMMUNITY"
+             Card 4: Value "FREE" | Label "GUEST DAY PASS" -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FACILITIES SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="facilities" class="section-pad" aria-labelledby="facilities-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <div class="section-label" aria-hidden="true">Club Amenities</div>
+        <h2 class="text-heading" id="facilities-heading">
+          Built For <span class="text-volt">Champions.</span>
+        </h2>
+        <p class="text-muted text-body" style="max-width:580px; margin: 0.75rem auto 0;">
+          Every zone engineered for peak performance — from heavy Olympic free weights and championship courts to high-intensity cardio and cedar saunas.
+        </p>
+      </header>
+
+      <!-- Bento Grid (populated by script.js) -->
+      <div class="bento-grid" id="bento-grid" role="list" aria-label="Lloyd Athletic Club facilities">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRICING SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="pricing" class="section-pad" aria-labelledby="pricing-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <div class="section-label" aria-hidden="true">Membership Tiers</div>
+        <h2 class="text-heading" id="pricing-heading">
+          Choose Your <span class="text-volt">Level.</span>
+        </h2>
+        <p class="text-muted text-body" style="max-width: 540px; margin: 0.75rem auto 0;">
+          Transparent club memberships for every Portland athlete. No surprise fees — only pure athletic excellence.
+        </p>
+      </header>
+
+      <!-- Toggle -->
+      <div class="pricing-toggle-wrap reveal" role="group" aria-label="Pricing period toggle">
+        <span class="toggle-label active" id="label-monthly">Monthly</span>
+
+        <label class="toggle-switch" for="pricing-toggle" aria-label="Switch to quarterly pricing">
+          <input type="checkbox" id="pricing-toggle" role="switch" aria-checked="false" />
+          <span class="toggle-track"></span>
+        </label>
+
+        <span class="toggle-label" id="label-quarterly">
+          3-Month Plan
+          <span class="toggle-badge" aria-label="Save more">SAVE MORE</span>
+        </span>
+      </div>
+
+      <!-- Pricing Cards (populated by script.js) -->
+      <div id="pricing-container" role="list" aria-label="Membership pricing plans">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LOCATION & CONTACT
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="location" class="section-pad" aria-labelledby="location-heading">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <div class="section-label" aria-hidden="true">Find Us</div>
+        <h2 class="text-heading" id="location-heading">
+          We're Right <span class="text-volt">Here.</span>
+        </h2>
+      </header>
+
+      <div class="location-grid">
+
+        <!-- Left: Address + Contact -->
+        <div class="location-info">
+
+          <!-- Address Card -->
+          <div class="address-card reveal">
+            <h3 aria-label="Lloyd Athletic Club Location">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Lloyd Athletic Club Studio
+            </h3>
+            <p class="address-line"><strong>815 NE Halsey St Suite B Studio 1</strong></p>
+            <p class="address-line">Portland, OR 97232</p>
+            <p class="address-line"><strong>Phone: (503) 287-4594</strong></p>
+
+            <!-- Schedule -->
+            <div class="schedule-list" id="schedule-list" role="list" aria-label="Opening hours">
+              <!-- Populated by script.js -->
+            </div>
+          </div>
+
+          <!-- Contact Buttons -->
+          <div class="contact-buttons reveal">
+
+            <a
+              href="tel:5032874594"
+              class="contact-btn whatsapp"
+              id="location-phone-btn"
+              aria-label="Call Lloyd Athletic Club"
+            >
+              <span class="cb-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <span>
+                <span class="cb-label">Direct Phone Line</span>
+                (503) 287-4594
+              </span>
+            </a>
+
+            <a
+              href="#pricing"
+              class="contact-btn facebook"
+              id="location-pass-btn"
+              aria-label="Claim Free Pass"
+            >
+              <span class="cb-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </span>
+              <span>
+                <span class="cb-label">Free Day Pass</span>
+                Claim Guest Pass
+              </span>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Right: Map -->
+        <div class="map-wrapper reveal" aria-label="Lloyd Athletic Club location on map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.074390509618!2d-122.658827!3d45.533261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0adb5d2f347%3A0xc3e16447eec65451!2s815%20NE%20Halsey%20St%20Suite%20B%2C%20Portland%2C%20OR%2097232!5e0!3m2!1sen!2sus!4v1700000000000"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lloyd Athletic Club Location Map — 815 NE Halsey St Suite B Studio 1, Portland, OR 97232"
+            allowfullscreen
+          ></iframe>
+          <div class="map-overlay-tag" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Lloyd Athletic Club — Portland, OR
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CALLOUT BANNER
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="wa-banner" aria-labelledby="wa-banner-heading">
+    <div class="container">
+      <div class="wa-banner-inner reveal">
+        <div class="wa-banner-text">
+          <h2 id="wa-banner-heading">
+            Ready to elevate your training? <span class="text-volt">Claim your pass.</span>
+          </h2>
+          <p>Experience Portland's premier athletic community today. Call or drop by our studio.</p>
+        </div>
+        <a
+          href="tel:5032874594"
+          class="btn-wa-large"
+          id="banner-call-btn"
+          aria-label="Call Lloyd Athletic Club"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          CALL (503) 287-4594
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer id="footer" aria-label="Lloyd Athletic Club Footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="Lloyd Athletic Club Home">LLOYD ATHLETIC CLUB</a>
+          <p class="footer-tagline">
+            Portland's Premier Athletic &amp; Fitness Destination. Elevate your training with top-tier equipment, championship courts, and an elite community.
+          </p>
+          <div class="footer-socials">
+            <a
+              href="tel:5032874594"
+              class="social-btn"
+              aria-label="Call Lloyd Athletic Club"
+              style="border-color: var(--border-volt); color: var(--volt);"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </a>
+            <a
+              href="#location"
+              class="social-btn"
+              aria-label="Find Lloyd Athletic Club on Map"
+              style="border-color: var(--border-cyan); color: var(--cyan);"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#facilities">Amenities</a></li>
+            <li><a href="#pricing">Memberships</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p class="footer-contact-item">
+            <a href="tel:5032874594">(503) 287-4594</a>
+          </p>
+          <p class="footer-contact-item">
+            815 NE Halsey St Suite B Studio 1,<br />
+            Portland, OR 97232
+          </p>
+          <p class="footer-contact-item" style="color:var(--volt); font-weight:600;">
+            PORTLAND, OR • ESTABLISHED COMMUNITY
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 <span>LLOYD ATHLETIC CLUB</span>. All rights reserved. Portland, OR.<br />
+          815 NE Halsey St Suite B Studio 1, Portland, OR 97232.
+        </p>
+        <span class="footer-bottom-badge">
+          Open &amp; Operating in Portland
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FLOATING QUICK CONTACT WIDGET
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="wa-float" aria-label="Quick contact">
+    <div class="wa-tooltip" role="tooltip" id="wa-tooltip">Call (503) 287-4594</div>
+    <a
+      href="tel:5032874594"
+      class="wa-float-btn"
+      id="wa-float-btn"
+      aria-label="Call Lloyd Athletic Club"
+      aria-describedby="wa-tooltip"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
